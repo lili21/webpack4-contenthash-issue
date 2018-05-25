@@ -8,7 +8,9 @@
   },
   "scripts": {
     "start": "webpack-serve --config webpack.dev.js",
-    "build": "rm -rf dist/ && webpack --config webpack.prod.js"
+    "build": "yarn build:1 & yarn build:2",
+    "build:1": "rm -rf dist-1/ && webpack --config webpack.prod-1.js",
+    "build:2": "rm -rf dist-2/ && webpack --config webpack.prod-2.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
